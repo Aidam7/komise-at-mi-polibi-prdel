@@ -13,3 +13,5 @@ HODNĚ ŠTĚSTÍ PŘI STUDIU!!!!! :) - Tonda, Naty a celá bývalá 8. B <3
 
 
 P.S. Pokud něco nenajdete teď, zkuste to za týden, až budu mít volno, tak to tu chci trochu zlidštit :D
+
+Bez povolení vykradeno z [tutama](https://drive.google.com/drive/folders/1bc4MdpX79dhJaJ6Nl2fR4n92r2GD4GjY).
