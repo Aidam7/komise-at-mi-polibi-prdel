@@ -1,0 +1,8 @@
+Počet bodů je napsaný u každé otázky, pokud je počet bodů za otázku nižší, než počet otázek (např. u A/N) odečítá se 1 bod za každou špatnou odpověď - tj. 4 správně - 2 body| 3 správně, 1 špatně - 1 bod| jinak 0 bodů
+
+Hodnocení:
+Výborně: 100-88%
+Chvalitebně: 74-87%
+Dobře: 59-73%
+Dostatečně: 44-58%
+Nedostatečně: 0-43%

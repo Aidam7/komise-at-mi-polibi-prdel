@@ -1,0 +1,55 @@
+1.1 N
+1.2 N
+1.3 N
+1.4 N
+2 B
+3 D
+4 B
+5 D
+6.1 je symbolem
+6.2 skutečnosti, skupina
+7.1 E 
+7.2 B
+7.3 D
+7.4 C
+8 8, 12
+9.1 E
+9.2 C
+9.3 B
+9.4 A
+9.5 D
+10.1 N 
+10.2 N
+10.3 A 
+10.4 N
+11 A
+12 D
+13 A
+14 D
+15 C
+16.1 A 
+16.2 A
+16.3 N
+16.4 N
+17 je, jim
+18 A
+19 C
+20.1 N
+20.2 N
+20.3 A
+20.4 A 
+21 B
+22 B
+23 A
+24.1 Jan Neruda
+24.2 Povídky malostranské 
+25 C
+26 B
+27 C
+28 ryzího, Přemyslovců, zpřístupněna, kapli 
+29.1 E
+29.2 B
+29.3 A
+30 C
+31 C
+32 B
