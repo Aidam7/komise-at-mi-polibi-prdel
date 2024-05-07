@@ -232,6 +232,7 @@ Digitální stěny:
 <br>
 ---
 <br>
+
 - **Rybí oko (fisheye)**:
     - Ohnisková vzdálenost: 6 až 8 mm
     - Extrémně široký obrazový úhel: 180° až 220°
