@@ -4,11 +4,17 @@ datové typy, reprezentace v paměti, přetypování, silně a slabě typované 
 
 ## Základní/Jednoduché datové typy
 
-- Char (ne string)
-- Číslo
-- Bool
+- **celé číslo (int)** - Reprezentuje celé číselné hodnoty v počítačové paměti. V závislosti na programovacím jazyku může být rozsah těchto hodnot omezen (např. 32-bitové integer v C).
 
-V podstatě je všechno číslo, char je číslo v tabulce, číslo je číslo (duh), bool je 0 nebo 1
+- **desetinné číslo (float)** - Používá se pro reprezentaci desetinných čísel. Floating point čísla používají exponent a mantisu k reprezentaci čísel s plovoucí desetinnou čárkou.
+
+- **znak (char)** - Ukládá jeden znak v kódování Unicode, ASCII nebo jiném znakovém kódování.
+
+- **dvojnásobné desetinné číslo (double)** - Podobné floatu, ale s větší přesností, často používané pro aplikace vyžadující vyšší přesnost v desetinných číslech.
+
+- **boolean (bool)** - Logická hodnota, která může být buď true (pravda) nebo false (nepravda).
+
+- **datum (date)** - Reprezentuje kalendářní datum a čas v různých formátech, včetně roků, měsíců, dnů, hodin, minut a sekund.
 
 ## Složité datové typy
 
@@ -17,6 +23,8 @@ V podstatě je všechno číslo, char je číslo v tabulce, číslo je číslo (
 #### Signed X Unsinged
 
 Unsigned mají plnou hodnotu, ale nemohou jít do mínusu, signed mají hodnotu poloviční, ale mohou do mínusu, protože používají první bit jako indikátor znaménka. Každé číslo může být singed nebo unsigned
+
+- Aktivně se používá **BINÁRNÍ KOMPLEMENT**, kde se bity invertují a přičte se 1 - je to proto, aby když se sečte - a + tak vyšla 0.
 
 #### Byte
 
@@ -34,7 +42,7 @@ Unsigned mají plnou hodnotu, ale nemohou jít do mínusu, signed mají hodnotu 
 
 V C# se int skládá ze 4 bytů, v jiných jazycích se to může lišit, ale všechno to funguje stejně jako signed a unsigned byte
 
-#### float
+#### float, double apod.
 
 Floating point číslo (desetinné)
 
@@ -58,21 +66,28 @@ Třeba `float == float` bude prakticky vždycky `false`, protože je téměř ne
 
 Typickým příkladem pro nepřesnost floatů je `0.1 + 0.2` správně by mělo vyjít `0.3`, ale vyjde `0.30000000000000004`
 
-## Složené datové typy
+- **Problémy s floating point aritmetikou**: Nelze úplně přesně reprezentovat desetinné hodnoty kvůli konečné přesnosti reprezentace v binární podobě.
 
-pole (array)
+## Složené datové typy:
 
-string: string je pouze pole charů
+- **pole (array/list)** - Skupina prvků stejného datového typu uložených za sebou v paměti.
 
-Objekty
+- **řetězec (string)** - Sekvence znaků uložená v paměti, často používaná pro reprezentaci textu.
 
-## Stack a Heap
+- **objekt** - Složený datový typ, který může obsahovat různé proměnné a metody.
+
+- **struktura (struct)** - Datová struktura, která umožňuje kombinovat různé typy dat pod jedním jménem.
+
+- **slovník (dictionary)** - List který má 2 datové hodnoty Key(většinou int) a Value
+
+## Stack a heap
 
 ### Stack
 
+Lokální proměnné a funkční volání jsou spravovány na stacku. Stack je obvykle rychlejší než heap, ale má omezenou velikost.
 Ukládá jednoduché typy a pointery na Heap
 
-![img](../../Obrazky/pointery.webp)
+![img](./pointery.webp)
 
 Pointer ukazuje kde se nachází proměnná v paměti, v C se označuje \*
 
@@ -82,6 +97,8 @@ Proměnné ve stacku se při předání kopírují
 
 ### Heap
 
+Dynamicky alokované proměnné jsou spravovány v heapu. Heap má pomalejší přístup než stack, ale umožňuje dynamické přidělování a uvolňování paměti a nemá omezenou velikost.
+
 Do heapu se ukládají objekty, pole a podobně, zkrátka všechno co je definováno klíčovým slovem new
 
 Pomalý zápis, pomalé čtení
@@ -90,25 +107,73 @@ Proměnné v heapu se při předání vytvoří pouze pointer
 
 Zjednodušeně řečeno, v Heapu je bordel, Stack je organizovaný
 
+## Garbage collection
+
+- Mechanismus, který automaticky detekuje a uvolňuje nepoužívanou paměť, čímž pomáhá zabránit únikům paměti a paměťovým chybám.
+
+### Jazyky které používají garbage collection:
+
+- **Java**: Java používá garbage collection k automatické správě paměti, což zjednodušuje vývoj softwaru a snižuje riziko úniku paměti.
+
+- **C#**: Stejně jako Java, i C# má vestavěný garbage collector.
+
+- **Python**: Python používá garbage collection pro automatické uvolňování paměti a eliminaci objektů, které již nejsou používány.
+
+### Jazyky které nepoužívají garbage collection:
+
+- **C**: C je jazyk, který nepoužívá vestavěný garbage collector. To může být náročné a vyžaduje pečlivé sledování alokace a dealokace paměti.
+
+- **C++**: Stejně jako C, i C++ nepoužívá vestavěný garbage collector.
+
+- **Rust**: Rust je jazyk s důrazem na bezpečnost a výkon a nepoužívá garbage collection. Místo toho používá systém vlastnictví a půjčování, který umožňuje bezpečné a efektivní správu paměti za běhu programu.
+
 ## Přetypování
 
-Většina jazyků povoluje implicitní přetypování. To je povoleno pouze v případě, že nedojde ke ztrátě dat, například int -> double, pokud jsme ochotni podstoupit možnou ztrátu dat musíme přetypovat explicitně, v C# pomocí `(typ)`.
+Konverze datových typů, která umožňuje převod jednoho typu dat na druhý.
+Většina jazyků povoluje implicitní přetypování. To je povoleno pouze v případě, že nedojde ke ztrátě dat, například int -> double, pokud jsme ochotni podstoupit možnou ztrátu dat musíme přetypovat explicitně, v C# pomocí `(typ)`, to je potřeba například při double --> int.
 
-## Strong x Weak typed jazyky
+<!--* Tohle mi přijde jako volovina sem dát tbh -->
+<!-- ### List možných přetypování
 
-Nikdo se nedokáže shodnout co dělá z jazyku Strong nebo Weak typed jazyk (politickou diskuzi prosim do issues)
+- String to int
+- Int to string
+- Enum to string
+- Enum to int -->
 
-Obecně se dá říct, že Strong typed jazyky více vzdorují při změnách typu, třeba nemají implicitní změny, a weak typed jazyky vás nechají. Obecně bych stočil u maturity k dynamickým a statickým jazkům
+## Silně vs. slabě typované jazyky
 
-Lidově řečeno, čim víc Strong typed tim víc vás kompilátor nutí nedělat s typama kraviny, např. C je weakly typed, protože vám dovolí převést string na float a je na vás se vyrovnat s následky
+- **Silně typované jazyky** - Striktně definují typy a provádějí kontrolu typů při kompilaci.
+
+  - Java
+  - C#
+  - C++
+
+- **Slabě typované jazyky** - Neprovádějí striktní kontrolu typů a umožňují flexibilní manipulaci s daty.
+  - JavaScript
+  - Python
+  - Ruby
 
 ## Dynamické x Statické jazyky
 
 Dynamické jazyky kontrolují typy proměnných při runtimu, Statické jazyky při kompilaci. Typicky statické jazyky jsou Java nebo C#, dynamické Javascript
 
-## Generické typy
+### Kompilované/interpretované jazyky
 
-C# nám umožňuje vytvářet třídy, které mohou přijmout proměnnou o jakémkoliv typu pomocí typu T, pokud je to potřeba můžeme i upřesnit T pomocí where
+- **Kompilované jazyky** - Jsou přeloženy do strojového kódu před spuštěním.
+
+  - C
+  - C++
+  - Rust
+
+- **Interpretované jazyky** - Jsou interpretovány řádek po řádku za běhu programu.
+  - Python
+  - JavaScript
+  - Ruby
+
+## Generické datové typy
+
+- Umožňují přijímat různé datové typy a provádět operace s nimi bez ohledu na konkrétní typ, což zvyšuje flexibilitu a znovupoužitelnost kódu. Například List<T> v jazyce C# umožňuje ukládat a manipulovat s kolekcí prvků různých typů.
+- Pokud je to potřeba můžeme blíže specifikovat T pomocí where
 
 ```csharp
 public class Trida<T> where T: IComparable
@@ -117,5 +182,3 @@ public class Trida<T> where T: IComparable
 }
 Zdroj: https://www.itnetwork.cz/csharp/kolekce-a-linq/c-sharp-tutorial-uvod-do-kolekci-a-genericita
 ```
-
-aaa
