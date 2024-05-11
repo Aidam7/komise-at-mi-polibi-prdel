@@ -1,4 +1,4 @@
-# Digitální fotografie (Br)
+# 15 - Digitální fotografie (Br)
 historie, třídy digi-fotoaparátů, základní parametry, objektivy a jejich vlastnosti, histogram, kompoziční principy
 
 ## Historie

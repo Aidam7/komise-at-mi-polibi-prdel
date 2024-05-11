@@ -501,7 +501,7 @@ daných kodeků)
     - Katarze - očištění, dojmutí (emoce)
     - Metanoia – vnitřní proměna, posun mysli
 
-- [Kompozice](./15_DigitalniFotografie.md#kompoziční-principy)
+- [Kompozice](/15%20-%20Digitální%20fotografie/README.md)
 - **Vliv hudby a zvuku**:
   - Hudba a zvuk mohou ovlivnit atmosféru a vyvolat emoce u diváka.
   - Obtížné je zpětně opravit rušivé zvuky nebo odstranit je ze záznamu.
@@ -540,7 +540,7 @@ daných kodeků)
         - Používání přechodů mezi záběry 
 
 
-## Scénář
+
 - **Scénář**:
   - Text pro divadelní hru nebo film.
   - Rozdělený na dva sloupce:
