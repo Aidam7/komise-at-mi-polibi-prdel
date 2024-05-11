@@ -57,7 +57,7 @@ Lze ho použít k vypsání informací o procesech, které běží na počítač
 
 > Mnohem lepší alternativou je htop, případně ještě lépe bpytop.
 
-Co to je proces a daemon [viz. otázka 2](/02%20-%20Základy%20OS/README.md)
+Co to je proces a daemon [viz. otázka 2](/MaturitniOtazky/02%20-%20Základy%20OS/README.md)
 
-vč. informací z [otázky 3](/03%20-%20Konfigurace%20OS/README.md)
+vč. informací z [otázky 3](/MaturitniOtazky/03%20-%20Konfigurace%20OS/README.md)
 
