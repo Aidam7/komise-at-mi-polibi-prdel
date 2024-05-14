@@ -2,46 +2,53 @@
 
 ## TCP/IP _(Transmission control protocol/internet protocol)_
 
+![alt text](image-1.png)
+
 1. Skupina protokolů umožňující komunikaci v počítačových sítí
 2. Zařizuje směrování
 3. Oproti modelu OSI má pouze 4 vrstvy a je více škálovatelný a využívá klient-server architekturu. Je lépe nasaditelný a tím se prosadil
 
-### Vrstvy
+## Vrstvy
 
-1. Aplikační vrstva
-    1. S touto vrstvou komunikují samotné aplikace, které potřebují přístup k internetu
-    2. Různé protokoly (HTTP, adál)
-2. Transportní vrstva
-    1. Protokoly TCP a UDP pro komunikace
-    2. TCP
-        Lepší pro přímou komunikaci, různé funkce, např. obnovení, používané v situacích kdy je potřeba spolehlivá komunikace (email, prohlížení webu)  
-        Větší hlavička (20-60B)  
-        Segment  
+### Aplikační vrstva
+- S touto vrstvou komunikují samotné aplikace, které potřebují přístup k internetu
+- Různé protokoly (HTTP, adál)
 
-- 1. UDP  
-        Očekává, že příjemce dostane všechny packety, není velký problém když ne. Využíváno v situacích, kdy se více hodí vyšší rychlost, nižší latence (streamování videa, hraní her, ...)  
-        Menší hlavička (8B)  
-        Datagram
+### Transportní vrstva
+-  Protokoly TCP a UDP pro komunikace
+
+#### TCP
+- Lepší pro přímou komunikaci, různé funkce, např. obnovení, používané v situacích kdy je potřeba spolehlivá komunikace (email, prohlížení webu)  
+- Větší hlavička (20-60B)  
+- Segment  
+
+####  UDP  
+- Očekává, že příjemce dostane všechny packety, není velký problém když ne. Využíváno v situacích, kdy se více hodí vyšší rychlost, nižší latence (streamování videa, hraní her, ...)  
+- Menší hlavička (8B)  
+- Datagram
+
 ![TCP a UDP header](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2020/02/header-TCP-vs-UDP.jpg)
 
-- 1. Komunikuje přes Porty v aplikační vrstvě
-        1. Každý port má přidělané číslo a vlastní specifickou funkci
-        2. 80 – HTTP
-        3. 20, 21 – FTP
-        4. 22 – SSH
-        5. 23 - TELNET
-        6. 443 – HTTPS
-        7. 25565 – MINECRAFT MULTIPLAYER DEFAULT PORT
+- Komunikuje přes Porty v aplikační vrstvě
+- Každý port má přidělané číslo a vlastní specifickou funkci:
 
+``` 
+80 – HTTP
+20, 21 – FTP
+22 – SSH
+23 - TELNET
+443 – HTTPS
+25565 – MINECRAFT MULTIPLAYER DEFAULT PORT
+```
 (Více příkladů - [Structure of the Internet: Standard application layer protocols - Wikibooks, open books for an open world)](https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_2/Fundamentals_of_communication_and_networking/Standard_application_layer_protocols)
 
-- 1. Data od aplikační vrstvy protokol rozloží na mnoho balíčků - packety
-  2. V hlavičce jsou instrukce jak balíčky opět složit do smysluplného výsledku a také kontrola, jestli příjemce vše dostal a správně složil
+-  Data od aplikační vrstvy protokol rozloží na mnoho balíčků - packety
+- V hlavičce jsou instrukce jak balíčky opět složit do smysluplného výsledku a také kontrola, jestli příjemce vše dostal a správně složil
 
-1. Internet
-    1. Využívá IP (internet protocol) pro připojení Origin IP adresy a destination IP adresy k packetům
-2. Network
-    1. Vrstva Network spravuje zasílání na správné zařízení pomocí MAC Adres
+### Internet
+- Využívá IP (internet protocol) pro připojení Origin IP adresy a destination IP adresy k packetům
+### Network
+- Vrstva Network spravuje zasílání na správné zařízení pomocí MAC Adres
 
 ## Služby (Přebráno a přeloženo z Bible – Jaroslav 16:4)
 
@@ -56,6 +63,8 @@
   - **Offer** – DHCP server nabídne IP adresu
   - **Request** – Klient příjme odpověď a zašle žádost o používání IP
   - **Acknowledge** – server alokuje IP adresu klientovi
+
+![alt text](image.png)
 
 ### DNS (Domain name server)
 
@@ -106,7 +115,7 @@
 - Port 25565
 - Využíván hrou Minecraft pro vytvoření veřejného světa, umožní pozvání kamarádů na svět.
 
-_Poštovní:_
+## Poštovní:
 
 ### POP3
 
@@ -135,6 +144,6 @@ _Poštovní:_
 - kladné 16bitové číslo
 - celkový rozsah portů je 0-65535 (port 0 je rezervován pro odesílající proces - neočekává odpověď)
 - porty jsou rozčleněny do třech skupin
-  - dobře známé (1-1023, porty různých základních/známých protokolů)
-  - registrované (1024-49151, porty přiřazené společností IANA specifickým službám)
-  - dynamické/privátní (49152-65535, porty privátní pro identifikaci např. v lokální síti)
+  - **dobře známé** (1-1023, porty různých základních/známých protokolů)
+  - **registrované** (1024-49151, porty přiřazené společností IANA specifickým službám)
+  - **dynamické/privátní** (49152-65535, porty privátní pro identifikaci např. v lokální síti)
