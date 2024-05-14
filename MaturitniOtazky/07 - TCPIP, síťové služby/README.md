@@ -6,7 +6,7 @@
 2. Zařizuje směrování
 3. Oproti modelu OSI má pouze 4 vrstvy a je více škálovatelný a využívá klient-server architekturu. Je lépe nasaditelný a tím se prosadil
 
-###Vrstvy
+### Vrstvy
 
 1. Aplikační vrstva
     1. S touto vrstvou komunikují samotné aplikace, které potřebují přístup k internetu
@@ -43,9 +43,9 @@
 2. Network
     1. Vrstva Network spravuje zasílání na správné zařízení pomocí MAC Adres
 
-##Služby (Přebráno a přeloženo z Bible – Jaroslav 16:4)
+## Služby (Přebráno a přeloženo z Bible – Jaroslav 16:4)
 
-###DHCP (Dynamic Host Configuration Protocol)
+### DHCP (Dynamic Host Configuration Protocol)
 
 - Porty 67 a 68 (67 Pro server, 68 pro klienta)
 - Automaticky přiřazuje TCP/IP adresovací informace klientům)
@@ -57,7 +57,7 @@
   - **Request** – Klient příjme odpověď a zašle žádost o používání IP
   - **Acknowledge** – server alokuje IP adresu klientovi
 
-###DNS (Domain name server)
+### DNS (Domain name server)
 
 - Port 53
 - Využíván pro komunikaci mezi DNS serverem a klientem
@@ -67,13 +67,13 @@
 - jeho hlavnímí úkoly a příčinou vzniku jsou vzájemné převody doménových jmen a IP adres uzlů sítě
 - např. ahoj.alexi.cz - nejprve se vyhledá skupina ‘.cz’, ve které se nalezne ‘.alexi’, ve které se nalezne ‘ahoj’ - toto se poté převede na IP
 
-###Telnet
+### Telnet
 
 - Port 23
 - umožňuje připojení ke vzdálenému počítači (absence šifrování dat, dnes nahrazen protokolem SSH)
 - Terminal-to-terminal komunikace, variace různých užití (testování propojení)
 
-###SSH
+### SSH
 
 - Port 22
 - Vyvinut jako náhrada pro Telnet a FTP
@@ -84,7 +84,7 @@
 - Po výměně server vyžádá auntentizaci uživatele
 - Nastavena bezpečná terminal-to-terminal komunikace pro posílání příkazů na vzdálený server
 
-###FTP (file transfer protocol)
+### FTP (file transfer protocol)
 
 - Port 20 a 21
 - Protokol umožňující rychlý přenos dat mezi dvěma body (nejčastěji rp osdílení dat – hudba, videa)
@@ -95,27 +95,27 @@
   - Compressed mode
 - Nebezpečí při posílání hesel/zranitelných dat, jelikož se posílají jako plain text (FTPS, podporuje TLS - Transport Layer Security, větší odezva)
 
-###HTTP (Hypertext transfer protocol)
+### HTTP (Hypertext transfer protocol)
 
 - Port 80
 - Využíván pro komunikaci s WWW servery na přenos hypertextových dokumentů (HTML, XML)
 - Neumožňuje šifronání ani zabezpečení integrity dat, využívá se TLS, označováno jako HTTPS, Port 443)
 
-###MMDP (Minecraft multiplayer default port)
+### MMDP (Minecraft multiplayer default port)
 
 - Port 25565
 - Využíván hrou Minecraft pro vytvoření veřejného světa, umožní pozvání kamarádů na svět.
 
 _Poštovní:_
 
-###POP3
+### POP3
 
 - Port 110
 - Protokol pro stahování emailů ze vzdáleného serveru
 - Nelze s emaily pracovat, pouze stahování, přečtení a mazání
 - Všechny maily se stáhnou na zařízení, proto jde používat i offline
 
-###IMAP
+### IMAP
 
 - Port 143
 - Pro přijímání mailů přes mail client
@@ -123,7 +123,7 @@ _Poštovní:_
 - Potřeba trvalé připojení
 - Možnost více uživatelů
 
-###SMTP
+### SMTP
 
 - Port 25
 - slouží k odesílání elektronické pošty poštovním klientem (protokol zajišťuje doručení pošty pomocí přímého spojení mezi odesílatelem a adresátem)
