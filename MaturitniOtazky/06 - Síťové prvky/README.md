@@ -23,10 +23,17 @@
 
 ### Switch
 - multipoint bridge
-- dělá vše, co bridge + navíc:
+- Dělá vše, co bridge + navíc:
     - pracuje rychle 
     - základní prvek pro hvězdicovou topologii
     - nepravuje frame
+    - má více portů
+- typy:
+    - L2 switche – pracují na druhé vrstvě modelu OSI (linková)
+    - L3 switche – pracují na třetí vrstvě modelu OSI (síťová), mají funkce routeru
+    - Nepřepínané (unmanaged) – základní funkce, bez možnosti konfigurace
+    - Přepínané (managed) – umožňují konfiguraci VLAN, QoS, STP, atd.
+    - Smart switche – nabízejí některé funkce managed switchů za nižší cenu
 
 - *princip funkce*
     - u přicházejících rámců čte zdrojovou MAC adresu a vytváří v paměti tabulku MAC adres a portů, odkud pochází, tabulka se označuje jako CAM (Content Addressable Memory) tabulka
@@ -49,8 +56,11 @@ Kvůli hledání kompromisu mezi zpožděním a spolehlivostí existuje několik
 - nabízí služby uvnitř LAN (směrování ze zdroje do cíle, segmentování sítě, ARP) a propojení do WAN (přes serial, ISDN, DSL, optiku)
 - broadcasty se standardně nepřeposílají - snižuje velikost broadcast domény
 - je pomalejší než switch, často je dnes nahrazován Layer 3 switchem (MultiLayer Switch)
-- vytváří novou hlavičku a ukončení (CRC) framu
-    -  CRC je síťová metoda určená k detekci chyb v datech a informacích přenášených po síti
+- typy:
+    - Nepřepínané (unmanaged) – základní funkce, bez možnosti konfigurace
+    - Přepínané (managed) – umožňují konfiguraci směrovacích protokolů, NAT, firewallu, VPN, atd.
+    - Edge routery – propojují vnitřní síť s internetem
+    - Core routery – směrují provoz uvnitř rozsáhlých sítí
 
 ### Firewall
 
@@ -58,6 +68,33 @@ Kvůli hledání kompromisu mezi zpožděním a spolehlivostí existuje několik
 - zprostředkovává komunikaci síťového zařízení se samotnou sítí
 - každá síťová karta má svoji jedinečnou MAC adresu
 - dělení: serverové x do běžných pracovních stanic
+
+### AP (Access Point)
+- slouží k připojení bezdrátových zařízení do kabelové sítě
+
+**Typy:**
+
+- Samostatné AP
+- AP integrované v routeru
+- Podnikové AP (větší dosah, více funkcí)
+
+**Parametry:**
+
+- Podporované standardy (802.11a/b/g/n/ac/ax)
+- Rychlost
+- Počet a typ antén
+- Výkon vysílání
+
+**Konfigurace:**
+
+- Nastavení SSID (název sítě)
+- Nastavení zabezpečení (WPA2, WPA3)
+- Nastavení kanálu
+- Nastavení výkonu vysílání
+
+<br/>
+<br/>
+<br/>
 
 ## Pasivní prvky
 Nejdůležitější vlastnosti:
