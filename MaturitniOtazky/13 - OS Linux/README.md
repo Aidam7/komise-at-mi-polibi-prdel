@@ -42,12 +42,30 @@ Linuxové distribuce jsou různé verze operačního systému Linux, které komb
 - **Linux Mint**
 - **openSUSE**
 - **Arch Linux**
-
-... a další.
+- ...
 
 > Live distribuce je verze Linuxové distribuce, kterou lze spustit přímo z bootovatelného média (jako je CD, DVD nebo USB flash disk) bez nutnosti instalace na pevný disk počítače. To znamená, že uživatel může vyzkoušet danou distribuci Linuxu bez jakýchkoliv změn na svém počítači. 
 
 > Při použití live distribuce se operační systém načte do paměti počítače, což umožňuje uživateli prozkoumat prostředí a funkce dané distribuce. Live distribuce obvykle obsahují základní sadu aplikací a nástrojů pro práci s počítačem, jako je webový prohlížeč, kancelářský software, správce souborů atd.
+
+# Co to je proces a daemon [viz. otázka 2](/MaturitniOtazky/02%20-%20Základy%20OS/README.md)
+
+# vč. informací z [otázky 3](/MaturitniOtazky/03%20-%20Konfigurace%20OS/README.md)
+
+<br/>
+<br/>
+<br/>
+
+# Věci navíc
+
+## Package manager 
+Správce balíčků v Linuxu je sada softwaru nebo nástrojů, která uživateli umožňuje efektivně spravovat balíčky. Uživatel může instalovat, aktualizovat, odebírat a konfigurovat balíčky pomocí podporovaného správce balíčků v operačním systému Linux.
+
+![alt text](image.png)
+
+- APT
+    - Ubuntu a další Debian-based distra
+- DPKG, ZYUM, RPM
 
 
 ## Příkaz TOP
@@ -56,8 +74,4 @@ Linuxové distribuce jsou různé verze operačního systému Linux, které komb
 Lze ho použít k vypsání informací o procesech, které běží na počítači. Výchozí výpis obsahuje informace o využití CPU, paměti a swapu, čas spuštění, uživateli, pod kterým proces běží, PID procesu a další. Příkaz top je užitečný pro sledování výkonu systému v reálném čase a pro identifikaci procesů, které spotřebovávají nejvíce prostředků.
 
 > Mnohem lepší alternativou je htop, případně ještě lépe bpytop.
-
-Co to je proces a daemon [viz. otázka 2](/MaturitniOtazky/02%20-%20Základy%20OS/README.md)
-
-vč. informací z [otázky 3](/MaturitniOtazky/03%20-%20Konfigurace%20OS/README.md)
 
