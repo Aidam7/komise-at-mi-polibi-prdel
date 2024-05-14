@@ -22,7 +22,7 @@
         Očekává, že příjemce dostane všechny packety, není velký problém když ne. Využíváno v situacích, kdy se více hodí vyšší rychlost, nižší latence (streamování videa, hraní her, ...)  
         Menší hlavička (8B)  
         Datagram
-![TCP a UDP header][(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.softwaretestinghelp.com%2Ftcp-vs-udp%2F&psig=AOvVaw00y4JO3YXKTmynCT2KtOEL&ust=1715781850948000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPjgic-njYYDFQAAAAAdAAAAABAE](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2020/02/header-TCP-vs-UDP.jpg))
+![TCP a UDP header](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2020/02/header-TCP-vs-UDP.jpg)
 
 - 1. Komunikuje přes Porty v aplikační vrstvě
         1. Každý port má přidělané číslo a vlastní specifickou funkci
