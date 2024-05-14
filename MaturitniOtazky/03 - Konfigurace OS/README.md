@@ -46,7 +46,7 @@ Kromě seznamu souborů a adresářů může příkaz `ls` zobrazit i další in
 > Zde je příklad výpisu příkazu `ls -l`:
 > ```-rwxr-xr-x 1 root root   68 Dec 14  2022 script.sh```
 > - `-rwxr-xr-x` - oprávnění
-> - `1` - počet odkazů
+> - `1` - počet hard-link odkazů
 > - `root` - vlastník
 > - `root` - skupina
 > - `68` - velikost v bajtech

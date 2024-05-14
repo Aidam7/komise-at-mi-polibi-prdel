@@ -84,6 +84,8 @@ Typy úložišť:
 
 ### 4.1 Pevný disk (HDD):
 **Pevné disky jsou tradiční formou úložiště, která využívá magnetické disky k ukládání dat**.
+
+![alt text](image.png)
 ### 4.2 SSD (Solid State Drive):
 **SSD používají paměť typu flash pro ukládání dat**. Jsou rychlejší a spolehlivější než pevné disky, ale jsou obvykle dražší a mají menší kapacitu.
 ### 4.3 M.2 SSD:

@@ -81,7 +81,7 @@ Nejdůležitější vlastnosti:
 <br>
 <br>
 
-![alt text](/MaturitniOtazky/Obrazky/diagram.png)
+![alt text](/Obrazky/diagram.png)
 
 ### Koaxiální kabel
 - Tvořen dvěma soustřednými vodiči
@@ -123,16 +123,9 @@ Nejdůležitější vlastnosti:
 
 ### Bezdrátové připojení
 - Využívá se tam, kde není možné připojení drátem
-- Typy:
-  - **Satelitní**: pro stahování velkého množství dat, asymetrické připojení
-  - **Mikrovlnné**: pracuje v bezlicenčních pásmech 2,4 GHz, 5 GHz a 10 GHz, často využíváno pro internetové připojení
-  - **Infračervené**: používá se na krátké vzdálenosti, například v mobilních telefonech, vyžaduje přímou viditelnost 
-  - **Rádiové**: využívá různé frekvence pro přenos dat
-    - Wifi
-    - BLuethooth
-
+- [více v otázce 9](/MaturitniOtazky/09%20-%20Bezdrátové%20technologie/README.md)
 ### Konektory a zásuvky
 - Používají se pro propojení síťových médií s aktivními prvky
 - Typy závisí na použité kabeláži: BNC pro koaxiální, RJ-45 pro kroucenou dvojlinku, různé typy pro optické kabely
 
-![alt text](/MaturitniOtazky/Obrazky/kabely.png)
+![alt text](/Obrazky/kabely.png)

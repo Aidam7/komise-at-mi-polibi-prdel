@@ -9,6 +9,8 @@
 - **API** (Application Programming Interface)** - SW, který umožňuje komunikaci mezi dvěma aplikacemi
 - **GNOME (GNU Network Object Model Environment)** - GUI + set PC aplikací pro uživatele Linuxu
 - **KDE (K Desktop Environment)** - Open source GUI pro Unix a Linux a dokonce Windows a Mac
+- **Daemon (démon)** - Démon je program, který běží nepřetržitě na pozadí multitaskingového OS, což znamená, že démoni nejsou pod přímou kontrolou uživatele. Démony aktivuje určitá akce nebo událost. Většina názvů souborů démonů končí písmenem d. Windows obsahuje *services*.
+- **Cron** - Cron je standardní unixový nástroj, který se používá k plánování příkazů pro automatické provádění v určitých intervalech
 
 ## Základní funkce OS
 
@@ -51,7 +53,7 @@
 4. **80-90. léta:** Osobní PC s [GUI](#terminologie) (Windows, Macintosh)
 5. **Současnost (>2000):** Vývoj zaměřen na mobilitu, cloudové technologie, bezpečnost a efektivní využití výpočetního výkonu.
 
-### Druhy operačních systémů:
+## Druhy operačních systémů:
 
 - **Dávkové (Batch) operační systémy:** Spouštěly programy v dávkách bez interakce s uživatelem.
 - **Interaktivní operační systémy:** Interake pomocí terminálů nebo textového rozhraní.
