@@ -70,18 +70,82 @@ Kontejnerizace je odlehčená forma virtualizace, která umožňuje spouštět a
     - odpovědný za ukládání a správu datových souborů, aby k nim mohly přistupovat další počítače ve stejné síti
     - umožňuje uživatelům sdílet informace v síti, aniž by museli fyzicky přenášet soubory
 - Hyperv
-    - virtuální mašina přímo na hardware, úplna virtualizace
+    - virtuální mašina přímo na hardware, úplná virtualizace
 - Windows server update services
     - role serveru Windows, která dokáže plánovat, spravovat a nasazovat aktualizace, opravy a hotfixy pro servery Windows, klientské (OS) a další software Microsoftu
 
 ## Popište důvody nasazení domain controlleru 
-- RSA vytváříme nad doménou... potřebujeme něco, co ji bude spravovat
+- Domain controller je typ serveru, který je nezbytný pro centralizaci uživatelských dat a ochranu zabezpečení sítě
+- Nejdůležitější funkcí je zajistit, aby k síťovým prostředkům měli přístup pouze relevantní a důvěryhodní uživatelé, a to prostřednictvím zpracování požadavků na ověření a ověřování uživatelů
+- Vynucuje zásady zabezpečení domény
 
 
 ## Popište DHCPv4, DHCPv6 (+ SLAAC)
+- DHCPv4 a DHCPv6 jsou služby, které nabízí DHCP server
 
+- **SLAAC (Stateless Address Autoconfiguration)** 
+    - Jednoduchá metoda přidělování IPv6 klientům pomocí protokolu NDP (Neighbor Discovery Protocol)
+    - Když je zařízení připojeno k síti, odešle zprávu Router Solicitation, aby zjistilo routery v síti. Pokud je router přítomen, odpoví zprávou Router Advertisement (RA) a poskytne informace, jako je výchozí brána a globální unicastový prefix. Klient použije tyto informace a techniku EUI-64 k vytvoření své globální jednosměrové adresy, která je pak platná pro použití v internetu. 
+    - SLAAC nevyžaduje žádnou konfiguraci, ale postrádá možnost zadat další informace, jako je nastavení DNS, k čemuž slouží DHCPv6.
 
-## Způsob počáteční komunikace mezi klientem a serverem
+- **Stateless DHCPv6**
+    - Kombinuje SLAAC s DHCPv6 a poskytuje další konfigurační informace
+    - RA zpráva má flag "other-config" nastavený na 1 => klient si zažádá DHCPv6 server pro další informace /třeba nastavení DNS/
+    - Server DHCPv6 tyto informace poskytuje bez správy pronájmů adres, proto se používá termín "stateless"
 
+- **Stateful DHCPv6**
+    - Podobný protokolu DHCPv4. V tomto přístupu nastavuje zpráva RA flag "managed-config" na 1, který označuje, že klient má používat DHCPv6 server jak pro přidělení adres, tak pro další konfigurační informace. 
+    - Server DHCPv6 spravuje pronájmy adres a poskytuje klientovi potřebné údaje.
+
+ukradnuto z: https://www.ictshore.com/free-ccna-course/dhcpv6-basics/
+
+### Způsob počáteční komunikace mezi klientem a serverem
+![alt text](image-3.png)
+
+více [zde](/MaturitniOtazky/07%20-%20TCPIP,%20síťové%20služby/README.md#dhcp)
 
 ## Popište DNS a strukturu domén
+- [Popis DNS](/MaturitniOtazky/07%20-%20TCPIP,%20síťové%20služby/README.md#dns)
+
+- Hiearchie domény se čte zprava doleva 
+- Každá doména má dvě části: top-level domain (TLD) a second-level domain (SLD)
+
+ukázka:
+
+```
+URL: https://www.freecodecamp.org
+Domain name: freecodecamp.com
+TLD: org
+SLD: freecodecamp
+```
+
+![alt text](image-5.png)
+
+- nahoře je "root" -> root doména má zero-lenght label
+- na první úrovni od kořene se nacházejí domény nejvyšší úrovně
+- pod doménami nejvyšší úrovně se nacházejí domény druhé úrovně (SLD). Děti každého uzlu se nazývají "subdomény", které jsou stále považovány za součást nadřazené domény
+
+ukradnuto z: https://www.freecodecamp.org/news/what-is-dns/
+
+- **Rekurzor DNS** - Rekurzora si můžeme představit jako knihovníka, který je požádán, aby někde v knihovně našel určitou knihu. Rekurzor DNS je server určený k přijímání dotazů z klientských počítačů prostřednictvím aplikací, jako jsou webové prohlížeče. Obvykle je pak rekurzor zodpovědný za zadávání dalších požadavků, aby uspokojil klientův dotaz DNS.
+
+- **Root nameserver** - root server je prvním krokem při překladu (překladu) lidsky čitelných názvů hostitelů na IP adresy. Lze si jej představit jako index v knihovně, který odkazuje na různé regály s knihami - obvykle slouží jako odkaz na další konkrétnější umístění.
+
+- **Jmenný server TLD** - Server domény nejvyšší úrovně (TLD) si lze představit jako konkrétní regál s knihami v knihovně. Tento nameserver je dalším krokem při hledání konkrétní IP adresy a hostí poslední část názvu hostitele 
+
+- **Autoritativní nameserver** - tento poslední nameserver si lze představit jako slovník na regálu knih, ve kterém lze konkrétní jméno přeložit do jeho definice. Autoritativní nameserver je poslední zastávkou v dotazu na nameserver. Pokud má autoritativní jmenný server přístup k požadovanému záznamu, vrátí IP adresu požadovaného hostitelského jména zpět rekurzoru DNS (knihovníkovi), který zadal původní požadavek.
+
+- **Rekurzivní překladač DNS**
+    - Rekurzivní resolver je počítač, který odpovídá na rekurzivní požadavek klienta a věnuje čas vyhledání záznamu DNS. Provádí to tak, že provádí řadu požadavků, dokud nedosáhne autoritativního jmenného serveru DNS pro požadovaný záznam (nebo pokud žádný záznam nenajde, ukončí se nebo vrátí chybu). Naštěstí rekurzivní DNS resolvery nemusí vždy provádět více požadavků, aby dohledaly záznamy potřebné k odpovědi klientovi; ukládání do mezipaměti je proces perzistence dat, který pomáhá zkrátit potřebné požadavky tím, že požadovaný záznam prostředku doručí dříve v rámci vyhledávání DNS.
+
+ukradnuto z : https://www.cloudflare.com/learning/dns/what-is-dns/ 
+
+![alt text](image-6.png)
+
+
+# I guess navíc
+
+## Group policy management
+![alt text](image-8.png)
+![alt text](image-7.png)
+![alt text](image-9.png)

@@ -18,16 +18,21 @@
 -  Protokoly TCP a UDP pro komunikace
 
 #### TCP
-- Lepší pro přímou komunikaci, různé funkce, např. obnovení, používané v situacích kdy je potřeba spolehlivá komunikace (email, prohlížení webu)  
+- Zajistí, aby nebyly zahozeny žádné pakety
+- Pokud zjistí chybějící pakety, požádá o opětovné odeslání paketů
+- Odesílá pakety v pořadí, aby je bylo možné snadno znovu sestavit
+- Protokol TCP bere v úvahu úroveň přetížení sítě
 - Větší hlavička (20-60B)  
-- Segment  
+- Segmenty
 
 ####  UDP  
 - Očekává, že příjemce dostane všechny packety, není velký problém když ne. Využíváno v situacích, kdy se více hodí vyšší rychlost, nižší latence (streamování videa, hraní her, ...)  
 - Menší hlavička (8B)  
-- Datagram
+- Datagramy
 
 ![TCP a UDP header](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2020/02/header-TCP-vs-UDP.jpg)
+
+![alt text](image-3.png)
 
 - Komunikuje přes Porty v aplikační vrstvě
 - Každý port má přidělané číslo a vlastní specifickou funkci:
@@ -52,11 +57,11 @@
 
 ## Služby (Přebráno a přeloženo z Bible – Jaroslav 16:4)
 
-### DHCP (Dynamic Host Configuration Protocol)
-
+### DHCP 
+- Dynamic Host Configuration Protocol
 - Porty 67 a 68 (67 Pro server, 68 pro klienta)
-- Automaticky přiřazuje TCP/IP adresovací informace klientům)
-- IP Adresu, masku, gateway, DNS, ...
+- Automaticky přiřazuje TCP/IP adresovací informace klientům
+  - IP Adresu, masku, gateway, DNS, ...
 - Využívá broadcast packety
 - 4 Kroky
   - **Discover** – Klient pošle broadcast zprávu pro nalezení DHCP serveru
@@ -66,8 +71,8 @@
 
 ![alt text](image.png)
 
-### DNS (Domain name server)
-
+### DNS 
+- (Domain name server)
 - Port 53
 - Využíván pro komunikaci mezi DNS serverem a klientem
 - hierarchicky distribuovaná databáze
