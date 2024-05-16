@@ -1,7 +1,9 @@
 # 16 - Digitální video  (Br)
+
 (historie, standardy digitálního TV vysílání, formáty, kodeky, progresivní/prokládané video, zvuková stopa)
 
 ## Historie
+
 - **Čína 2000 př. n. l.**:
   - Nakresleno mnoho obrázků, které pak dávaly dojem pohybu.
   - Lovec se sklání pro oštěp
@@ -31,6 +33,7 @@
   - 1985 - první digitální kamery
 
 ## Princip záznamu
+
 - **Konec 19. století**:
   - Vznik prvních záznamových zařízení pro zachycení děje na filmový pás
   - Časem byl doplněn i zvukový záznam
@@ -66,33 +69,35 @@
     - Využívá prvek CCD pro převod obrazu do elektronické podoby
 
 - **Digitální ukládání záznamu**
-    - Obsahuje zvukové a obrazové informace uložené na digitální pásku
-    - Skládá se z video stopy, audio stop a řídící stopy
-        - Video stopa: skládá se z řady nehybných snímků
-        - Řídící stopa - kde začíná a končí každý snímek
-        - Audio stopa - umožňuje nahrávat stereo zvuk
-    - Videokamery tvoří barvu v RGB, videosignál obsahuje informaci o jasu
-    - Kodeky jsou zabudované v kameře nebo videokartě
-        - Kodekz mohou být ztrátové a bezeztrátové
+  - Obsahuje zvukové a obrazové informace uložené na digitální pásku
+  - Skládá se z video stopy, audio stop a řídící stopy
+    - Video stopa: skládá se z řady nehybných snímků
+    - Řídící stopa - kde začíná a končí každý snímek
+    - Audio stopa - umožňuje nahrávat stereo zvuk
+  - Videokamery tvoří barvu v RGB, videosignál obsahuje informaci o jasu
+  - Kodeky jsou zabudované v kameře nebo videokartě
+    - Kodekz mohou být ztrátové a bezeztrátové
 
 - **Videozáznam**
   - Sled po sobě jdoucích obrazů zobrazujících situaci v časových okamžicích
-  - Trhaný pohyb se stal realistickým po zavedení frekvence 25 snímků za sekundu 
+  - Trhaný pohyb se stal realistickým po zavedení frekvence 25 snímků za sekundu
   - Obrázky prezentovány jako bitová mapa s definovanou barvou
-
 
 ## Standardy digitálního TV vysílání
 
 ### DVB-S (satelit)
+
 - První digitální vysílání k dispozici u nás
 - TV signál se šíří pomocí vysílače - vysílá signál v úzkem pásu - přeposíláním signálu přes satelit, ten přepošle signál v širokém pásmu (pokryje velkou část povrchu Země) zpět na Zem
 - Příjemce potřebuje parabolickou anténu, digitální dekodér a přístupovou kartu (potvrdí, že je autorizovaným odběratelem signálu)
 
 ### DVB-C (cabel)
+
 - Šířen prostřednictvím kabelové sítě - optické
 - Platí se za přístup k televiznímu signálu
 
 ### DVB-T (terrestrial)
+
 - Podzemní
 - Ke konci roku 2011 bylo pokryto území ČR a bylo ukončeno analogové televizní vysílání
 - Kmitočty (kanály/frekvence), které dříve nesly signál 1 televizní stanice, nyní nesou tzv. multiplex
@@ -102,29 +107,32 @@
 ![alt text](/Obrazky/telka.png)
 
 - Doplňkové služby
-    - Televizní program
-    - Teletext
-    - OSD - sekundární signál, který překrývá primární signál
-    - Možnost poslechu rádia
+  - Televizní program
+  - Teletext
+  - OSD - sekundární signál, který překrývá primární signál
+  - Možnost poslechu rádia
 
 ### Standardy videa pro anologové vysílání
+
 - Různé v různých částech světa
 - 3 hlavní:
-    - NTSC - Severní amerika
-    - PAL - většina Everopy
-    - SECAM - Francie, Rusko
+  - NTSC - Severní amerika
+  - PAL - většina Everopy
+  - SECAM - Francie, Rusko
 
     ![alt text](/Obrazky/AMERIKAHALLO.png)
 
 ### Standardy videa pro digiální vysílání
+
 - Standard od roku 2006 == DTV
-    - Podstandardy - HDTV1080 a HDTV720, představují vyšší kvalitu
+  - Podstandardy - HDTV1080 a HDTV720, představují vyšší kvalitu
 
     ![alt text](/Obrazky/hdtv.png)
 
 ## Pojmy
 
 ### Barevné modely
+
 - **BW** (černobílý model)
   - Obrázky pouze v černé a bílé
 
@@ -140,6 +148,7 @@
 <br>
 
 ### Rozlišení
+
 - **PAL**
   - Televizní formát: 720×576px, 25 fps
   - Velikost: 1 sekunda má 31.64 MB, 45 minut při klasické kompresi 350 MB.
@@ -167,22 +176,24 @@
 <br>
 
 ### Datový tok (bit rate)
+
 - Množství digitálních dat přenesené za určitou časovou jednotku
 - Počítá se většinou v Megabitech za sekundu (Mbit/s)
 - Obecně lze říci, že čím vyšší hodnota, tím kvalitnější digitální video
 
 - Stálý datový tok (CBR, constant bitrate)
-    - Konstantní po celou dobu přehrávání
-    - Jednoduchý na kompresi, ale data proudí stále stejnou rychlostí i tam, kde to není bezpodmínečně nutné (klidová scéna bez pohybu) – zabírá zbytečné místo na disku
-    - Používá se u starších kompresních algoritmů
-    - Lze dobře synchronizovat (Titulky) díky konstantní velikosti za sekundu
+  - Konstantní po celou dobu přehrávání
+  - Jednoduchý na kompresi, ale data proudí stále stejnou rychlostí i tam, kde to není bezpodmínečně nutné (klidová scéna bez pohybu) – zabírá zbytečné místo na disku
+  - Používá se u starších kompresních algoritmů
+  - Lze dobře synchronizovat (Titulky) díky konstantní velikosti za sekundu
 
 - Proměný datový tok (VBR, variable bitrate)
-    - Kompresní poměr se dynamicky mění podle složitosti scény
-    - Při rychlém pohybu je komprese nejmenší (datový tok největší)
-    - Při klidových scénách je komprese největší (datový tok je výrazně menší)
+  - Kompresní poměr se dynamicky mění podle složitosti scény
+  - Při rychlém pohybu je komprese nejmenší (datový tok největší)
+  - Při klidových scénách je komprese největší (datový tok je výrazně menší)
 
 ## Progresivní/prokládané video
+
 - Horizontální velikost se neudává a udává se pouze počet vertikálního rozlišení **720p, 1080i**
 - Progresivní – značí se p
 - Prokládané (Interlaced) – značí se i
@@ -213,6 +224,7 @@
 ### Metody odstranění prokladu
 
 #### Sloučení půlsnímků
+
 - Každý lichý a sudý půlsnímek je sestaven do jednoho úplného snímku
 - Tato metoda poskytuje ostrý obraz pro statické scény, ale může vést k rozmazání obrazu při rychlých pohybech
 
@@ -258,7 +270,7 @@
 
 ![alt text](/Obrazky/kontainer.png)
 
-## Poměr stran 
+## Poměr stran
 
 ### Aspect Ratio (AR)
 
@@ -286,8 +298,8 @@
 
 Poměr stran ve videu může být ovlivněn různými faktory a může být důležitý pro správné zobrazení videa na různých zařízeních.
 
-
 ## Formáty
+
 - **AVI (Audio Video Interleave)**
   - Standard digitálního videa
   - Využívá se od začátku užívání videa v PC - nejběžnější a nejstarší formát
@@ -374,17 +386,19 @@ Poměr stran ve videu může být ovlivněn různými faktory a může být důl
 ![alt text](/Obrazky/panacek.png)
 
 ## Kodeky
+
 - angl. codec – coder/dekoder
 - Řídí kompresi a dekompresi videa
 - Kodek je tedy mechanismus, který snímky daného videa zakóduje do menší podoby a při přehrávání videa jej zase dekóduje již v reálném čase
 - Kompresní algoritmy se neustále vyvíjejí, není možné zabudovat podporu pro všechny kodeky
 - Činnost kodeku
-    - Kamera – program – kodek – program – soubor
-    - Soubor – program – kodek – program – zobrazení
+  - Kamera – program – kodek – program – soubor
+  - Soubor – program – kodek – program – zobrazení
 - Bez kodeku nelze přeložit data uložená v daném typu souboru (Nutnost stahování
 daných kodeků)
 
-### Typy kodeků:
+### Typy kodeků
+
 - **Bezeztrátové kodeky**
   - Mají tu výhodu, že video neztratí žádnou informaci.
   - To je ale vykoupeno nízkým komprimačním poměrem, většinou se poměr komprese pohybuje 1:2.
@@ -396,7 +410,7 @@ daných kodeků)
 - **HuffYUV**
   - Tento kodek komprimuje video s použitím Huffmanova kódování
   - V nejlepším případě komprimuje až na 40 % původní velikosti
-  - Zvládá kompresi obrazu v barevném formátu RGB i YUV, je velmi rychlý 
+  - Zvládá kompresi obrazu v barevném formátu RGB i YUV, je velmi rychlý
 
 - **Ztrátové kodeky**
   - Naopak využívají toho, že obraz nemusí být naprosto dokonalý, dokonce může být zkreslený, až drasticky
@@ -424,7 +438,9 @@ daných kodeků)
   - Hlavní konkurencí pro Xvid je DivX
 
 ## Zvuková stopa
+
 ### Zvuk
+
 - Mechanické vlnění
 - Šíří se v každém prostředí jinou rychlostí
 - Řidší zvuk = šíří se pomaleji, ve vakuu vůbec
@@ -489,17 +505,16 @@ daných kodeků)
 - **AC3 (Dolby Digital)**
   - Používán výhradně pro DVD, s problematickým poměrem mezi kvalitou a kompresí zvuku
 
-
 # Kecy navíc
 
 - Aristotelské schéma
-    - Expozice - kdo, kdy, kde (vtažení do děje)
-    - Kolize - nečekaná zápletka
-    - Krize - konec světa
-    - Peripetie - zklidnění, nové situace (řešení situace)
-    - Katastrofa (dopadne to špatně?, krize se nevyřeší)
-    - Katarze - očištění, dojmutí (emoce)
-    - Metanoia – vnitřní proměna, posun mysli
+  - Expozice - kdo, kdy, kde (vtažení do děje)
+  - Kolize - nečekaná zápletka
+  - Krize - konec světa
+  - Peripetie - zklidnění, nové situace (řešení situace)
+  - Katastrofa (dopadne to špatně?, krize se nevyřeší)
+  - Katarze - očištění, dojmutí (emoce)
+  - Metanoia – vnitřní proměna, posun mysli
 
 - [Kompozice](/15%20-%20Digitální%20fotografie/README.md)
 - **Vliv hudby a zvuku**:
@@ -507,18 +522,18 @@ daných kodeků)
   - Obtížné je zpětně opravit rušivé zvuky nebo odstranit je ze záznamu.
   - Přidávání zvuků do záznamu je naopak snadné.
     - **Mikrofony**:
-        - Mikrofony kamer často zachytí i nechtěné zvuky kamery.
-        - Doporučuje se použití externích mikrofonů pro lepší kvalitu zvuku.
+      - Mikrofony kamer často zachytí i nechtěné zvuky kamery.
+      - Doporučuje se použití externích mikrofonů pro lepší kvalitu zvuku.
     - **Dvojí záznam**:
-        - V některých situacích je nutný dvojitý záznam obrazu a zvuku, například při natáčení rozhovoru osob v jedoucím autě zvenku.
+      - V některých situacích je nutný dvojitý záznam obrazu a zvuku, například při natáčení rozhovoru osob v jedoucím autě zvenku.
 - **Osvětlení:**
-    - Největší vliv na kvalitu 
-    - Denní světlo (bilá nebo namodralá barva) - 5 500 K
-    - Žárovka (teplý nazlátlý odstín) - 3 200 K
-    - V profesionální praxi se nejčastěji používá **tříbodové osvětlení scény**
-        - **hlavní světlo** – umístěno před hercem, zajišťuje hlavní nasvícení scény
-        - **výplňové světlo** – umístěno mírně stranou, odstraňuje přílišné stíny a jejich ostrý přechod
-        - **obrysové světlo** – umístěno za hercem, vytváří obrys herce, aby nesplynul s pozadím
+  - Největší vliv na kvalitu
+  - Denní světlo (bilá nebo namodralá barva) - 5 500 K
+  - Žárovka (teplý nazlátlý odstín) - 3 200 K
+  - V profesionální praxi se nejčastěji používá **tříbodové osvětlení scény**
+    - **hlavní světlo** – umístěno před hercem, zajišťuje hlavní nasvícení scény
+    - **výplňové světlo** – umístěno mírně stranou, odstraňuje přílišné stíny a jejich ostrý přechod
+    - **obrysové světlo** – umístěno za hercem, vytváří obrys herce, aby nesplynul s pozadím
 - **Začátek a konec**:
   - Možnosti: panorama, statický
   - Různé úrovně záběrů: Velký Celek, Celek, PoloCelek, PoloDetail, Detail, Velký Detail
@@ -528,18 +543,16 @@ daných kodeků)
   - Styl střihu: dovolená, přednáška, videoklip, cestopisný dokument
   - Pozor na osu natáčení a osu záběru
     - **Pravidla střihu**:
-        - Používání přirozených titulků
-        - Pravidlo 3-3-3: situace, popření, vysvětlení
-        - Opakování něčeho musí být třikrát jinak
-        - Synchronizace zvuku a obrazu
-        - Vyvarovat se dlouhých nebo příliš krátkých záběrů
+      - Používání přirozených titulků
+      - Pravidlo 3-3-3: situace, popření, vysvětlení
+      - Opakování něčeho musí být třikrát jinak
+      - Synchronizace zvuku a obrazu
+      - Vyvarovat se dlouhých nebo příliš krátkých záběrů
     - **Střihová interpunkce**:
-        - Obrazová interpunkce: 
-            - přirozená - stmívačky, světla nebo záběr na jednobarevnou plochu, rozostření
-            - umělá - stmívačka, prolnutí, ostatní vesměs nepoužívat
-        - Používání přechodů mezi záběry 
-
-
+      - Obrazová interpunkce:
+        - přirozená - stmívačky, světla nebo záběr na jednobarevnou plochu, rozostření
+        - umělá - stmívačka, prolnutí, ostatní vesměs nepoužívat
+      - Používání přechodů mezi záběry
 
 - **Scénář**:
   - Text pro divadelní hru nebo film.

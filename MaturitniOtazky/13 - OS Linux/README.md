@@ -21,6 +21,7 @@ Mapování k vnitřní struktuře operačního systému pomocí tzv. "ringů" (k
 ![OS Rings, x86](os_rings.png)
 
 ## Linux vs ostatní operační systémy, jeho výhody
+
 Linux je operační systém založený na otevřeném kódu, což znamená, že jeho zdrojový kód je k dispozici a může být upraven, distribuován a využíván komunitou vývojářů. Porovnání Linuxu s ostatními operačními systémy, jako jsou Windows a macOS, závisí na konkrétních potřebách uživatele. Zde jsou některé hlavní aspekty a výhody Linuxu:
 
 - **Otevřený kód**: Jednou z hlavních výhod Linuxu je jeho otevřenost. Tato otevřenost umožňuje komunitě vývojářů přizpůsobit a vylepšovat systém dle potřeb uživatelů, což vede k širokému výběru distribucí (jednotlivých verzí Linuxu) s různými funkcemi a možnostmi.
@@ -30,11 +31,12 @@ Linux je operační systém založený na otevřeném kódu, což znamená, že 
 - **Serverové aplikace a vývoj**: Linux je široce využíván v serverovém prostředí díky své stabilitě, výkonnosti a možnostem přizpůsobení. Je oblíbený pro webové servery, cloudové infrastruktury a vývoj aplikací.
 - **Bezplatnost**: Většina distribucí Linuxu je zdarma ke stažení a použití, což je pro mnoho uživatelů atraktivní.
 
-
 ## Distribuce Linuxu
+
 Linuxové distribuce jsou různé verze operačního systému Linux, které kombinují jádro Linuxu s různými sadami softwaru, uživatelskými rozhraními a aplikacemi. Každá distribuce má své vlastní cíle a zaměření, což může zahrnovat stabilitu, použitelnost, bezpečnost, specifické funkce nebo podporu pro různý typ hardwaru.
 
-Často používané jsou napčíklad: 
+Často používané jsou napčíklad:
+
 - **Ubuntu** - Ubuntu je jedna z nejpopulárnějších distribucí Linuxu. Je to open source operační systém, který je založen na Debianu. Ubuntu je známé svou jednoduchostí, uživatelskou přívětivostí a širokou podporou hardwaru.
 - **Debian** - Debian je jedna z nejstarších a nejvíce respektovaných distribucí Linuxu. Je to open source operační systém, který je známý svou stabilitou, bezpečností a širokou podporou hardwaru.
 - **Red Hat Enterprise Linux** - Red Hat Enterprise Linux (RHEL) je komerční distribuce Linuxu, která je založena na open source projektu Fedora. Je to jedna z nejpopulárnějších distribucí Linuxu pro firemní prostředí, s placenou podporou a dlouhodobou životností.
@@ -44,7 +46,7 @@ Linuxové distribuce jsou různé verze operačního systému Linux, které komb
 - **Arch Linux**
 - ...
 
-> Live distribuce je verze Linuxové distribuce, kterou lze spustit přímo z bootovatelného média (jako je CD, DVD nebo USB flash disk) bez nutnosti instalace na pevný disk počítače. To znamená, že uživatel může vyzkoušet danou distribuci Linuxu bez jakýchkoliv změn na svém počítači. 
+> Live distribuce je verze Linuxové distribuce, kterou lze spustit přímo z bootovatelného média (jako je CD, DVD nebo USB flash disk) bez nutnosti instalace na pevný disk počítače. To znamená, že uživatel může vyzkoušet danou distribuci Linuxu bez jakýchkoliv změn na svém počítači.
 
 > Při použití live distribuce se operační systém načte do paměti počítače, což umožňuje uživateli prozkoumat prostředí a funkce dané distribuce. Live distribuce obvykle obsahují základní sadu aplikací a nástrojů pro práci s počítačem, jako je webový prohlížeč, kancelářský software, správce souborů atd.
 
@@ -58,20 +60,20 @@ Linuxové distribuce jsou různé verze operačního systému Linux, které komb
 
 # Věci navíc
 
-## Package manager 
+## Package manager
+
 Správce balíčků v Linuxu je sada softwaru nebo nástrojů, která uživateli umožňuje efektivně spravovat balíčky. Uživatel může instalovat, aktualizovat, odebírat a konfigurovat balíčky pomocí podporovaného správce balíčků v operačním systému Linux.
 
 ![alt text](image.png)
 
 - APT
-    - Ubuntu a další Debian-based distra
+  - Ubuntu a další Debian-based distra
 - DPKG, ZYUM, RPM
 
-
 ## Příkaz TOP
+
 ![top output](top.png)
 
 Lze ho použít k vypsání informací o procesech, které běží na počítači. Výchozí výpis obsahuje informace o využití CPU, paměti a swapu, čas spuštění, uživateli, pod kterým proces běží, PID procesu a další. Příkaz top je užitečný pro sledování výkonu systému v reálném čase a pro identifikaci procesů, které spotřebovávají nejvíce prostředků.
 
 > Mnohem lepší alternativou je htop, případně ještě lépe bpytop.
-
