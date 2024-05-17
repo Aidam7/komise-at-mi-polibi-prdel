@@ -16,7 +16,7 @@
 
 - Implementace: Software pro implementaci výše uvedeného.
 
-## Architektura souborového systému
+## Architektura souborového systému - Linux
 
 ![alt text](image-4.png)
 
@@ -64,7 +64,7 @@ Souborové systémy spravují fyzické i logické operace spojené s manipulací
   - Spolupráce s rolemi/oprávněními systému Windows
   - Možnost definovat kdo může používat konkrétní data a k čemu je může může používat
 - Komprese
-- Dovoluje delší názvy díky Unicode
+- Dovoluje delší názvy díky - Unicode
 
 ## Linux
 
