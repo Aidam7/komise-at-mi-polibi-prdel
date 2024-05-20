@@ -20,7 +20,8 @@ Realizuje spojení a výměnu informací mezi počítači, komunikuje podle urč
 Spojování, seskupování, shlukování (udává se x: y–x → minimální podíl; y → maximální podíl z rychlosti).
 ## Bezstavovost: 
 Vztahuje se k implementaci protokolů, kde protokol je jednoduché implementovat a představuje malou zátěž pro server. Jednotlivé požadavky na server položené spolu nejsou nijak svázány, server neví, zda jsou od téhož uživatele, zda spolu nějak souvisejí.
-## Síťová karta: 
+## Síťová karta (NIC): 
+Network Interface Controller
 Hardware k vzájemné komunikaci v PC síti.
 ## Firewall: 
 Kontrola a omezení komunikace počítače po síti.
